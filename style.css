@@ -1,0 +1,40 @@
+:root{
+   --dark-grey: hsl(234, 29%, 20%);
+   --charcoal-grey: hsl(235, 18%, 26%);
+   --grey: hsl(231, 7%, 60%);
+   --white: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    background: var(--charcoal-grey);
+}
+
+body{
+    margin:0 auto;
+    font-family: "Roboto",sans-serif;
+}
+
+h1,h2,h3,p{
+    margin:0;
+}
+
+main{
+    background: var(--white);
+}
+
+article{
+    padding: 0 1.5rem;
+    margin-top: 2rem;
+}
+
+form input, form button{
+    width: 100%;
+}
+
+.desk-img{
+    display: none;
+}
