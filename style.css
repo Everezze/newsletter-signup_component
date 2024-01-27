@@ -16,6 +16,7 @@ html{
 body{
     margin:0 auto;
     font-family: "Roboto",sans-serif;
+    color: var(--dark-grey);
 }
 
 h1,h2,h3,p{
@@ -24,6 +25,12 @@ h1,h2,h3,p{
 
 main{
     background: var(--white);
+    padding: 0 0 3rem;
+}
+
+h1{
+    font-size: min(5vw + 1rem, 4rem);
+    margin-bottom: 1.5rem;
 }
 
 article{
@@ -31,10 +38,65 @@ article{
     margin-top: 2rem;
 }
 
-form input, form button{
+input,button{
     width: 100%;
+    padding: 1rem 0;
+    font-family: "Roboto",sans-serif;
+    border-radius: .5rem;
+    border: none;
+}
+
+input{
+    padding-left: 1.25rem;
+    border: 1px solid var(--grey);
+    color: var(--dark-grey);
+    margin: .5rem 0 1.5rem;
+}
+
+input:focus{
+    outline: 1px solid var(--dark-grey);
+    border: none;
+}
+
+button{
+    color: var(--white);
+    background: var(--dark-grey);
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+span{
+    padding-left: 1rem;
+    display: inline-block;
+    width: 90%;
+}
+
+img{
+    vertical-align: top;
+}
+
+label{
+    font-size: .8rem;
+    font-weight: 700;
 }
 
 .desk-img{
     display: none;
 }
+
+.success-msg{
+    display: none;
+}
+
+.pros{
+    margin: 1.5rem 0 3rem;
+}
+
+.pros > *+*{
+    margin-top: 1rem;
+}
+
+.pros>*{
+    line-height: 1.5rem;
+}
+
