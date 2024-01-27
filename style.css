@@ -14,7 +14,6 @@ html{
 }
 
 body{
-    margin:0 auto;
     font-family: "Roboto",sans-serif;
     color: var(--dark-grey);
 }
@@ -26,15 +25,20 @@ h1,h2,h3,p{
 main{
     background: var(--white);
     padding: 0 0 3rem;
+    max-width: 910px;
+    margin:0 auto;
 }
 
 h1{
-    font-size: min(5vw + 1rem, 4rem);
+    font-size: min(5vw + 1rem, 3.5rem);
     margin-bottom: 1.5rem;
 }
 
 article{
     padding: 0 1.5rem;
+}
+
+.main-content{
     margin-top: 2rem;
 }
 
@@ -80,8 +84,13 @@ label{
     font-weight: 700;
 }
 
+.mobile-img img,.desk-img img{
+    width: 100%;
+}
+
 .desk-img{
     display: none;
+    max-width: fit-content;
 }
 
 .success-msg{
@@ -100,3 +109,28 @@ label{
     line-height: 1.5rem;
 }
 
+@media screen and (min-width:900px) {
+    .mobile-img{
+        display: none;
+    }
+
+    .main-content,.desk-img{
+        display: inline-block;
+        width: 49%;
+        vertical-align: middle;
+    }
+
+    main{
+        padding: 1.5rem;
+        text-align-last: justify;
+        border-radius: 2rem;
+    }
+
+    main *{
+        text-align-last: initial;
+    }
+
+    .main-content{
+        margin-top: 0;
+    }
+}
