@@ -15,11 +15,7 @@ input.addEventListener("input",function(){
         }
     }
     else{
-        //using short-circuit logic to not re-set validEmail to false if it was
-        //already(maybe faster?)
-        if(!validEmail){
-            validEmail = false;
-        }
+        validEmail = false;
         if(submittedOnce && !input.value == ""){
             input.classList.add("active");
             errorMessage.classList.add("active");
