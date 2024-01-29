@@ -3,6 +3,7 @@
    --charcoal-grey: hsl(235, 18%, 26%);
    --grey: hsl(231, 7%, 60%);
    --white: hsl(0, 0%, 100%);
+   --tomato: hsl(4,100%,67%);
 }
 
 *{
@@ -79,9 +80,20 @@ img{
     vertical-align: top;
 }
 
-label{
+form label,form b{
     font-size: .8rem;
     font-weight: 700;
+    display: inline-block;
+}
+
+form b{
+    color: var(--tomato);
+    display: none;
+}
+
+
+.label-state{
+    text-align-last: justify;
 }
 
 .mobile-img img,.desk-img img{
@@ -107,6 +119,17 @@ label{
 
 .pros>*{
     line-height: 1.5rem;
+}
+
+form b.active{
+    display: inline-block;
+}
+
+input.active{
+    outline: 1px solid var(--tomato);
+    color: var(--tomato);
+    border: none;
+    background: hsla(4,100%,67%,20%);
 }
 
 @media screen and (min-width:900px) {
