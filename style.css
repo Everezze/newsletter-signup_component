@@ -68,6 +68,12 @@ button{
     background: var(--dark-grey);
     font-weight: 700;
     font-size: .9rem;
+    cursor: pointer;
+}
+
+input:not(.active)+button:hover,.success-msg button:hover{
+    /*#e0115f*/
+    background: linear-gradient(90deg, #e43757,#ff4500);
 }
 
 span{
@@ -105,10 +111,6 @@ form b{
     max-width: fit-content;
 }
 
-.success-msg{
-    display: none;
-}
-
 .pros{
     margin: 1.5rem 0 3rem;
 }
@@ -130,6 +132,40 @@ input.active{
     color: var(--tomato);
     border: none;
     background: hsla(4,100%,67%,20%);
+}
+
+.success-msg{
+    display: none;
+    max-width: 410px;
+    margin: 0 auto;
+}
+
+.success-msg h2{
+    font-size: 3rem;
+    margin: 1.5rem 0;
+    line-height: 3rem;
+}
+
+.success-msg p{
+    margin: 1.5rem 0 2rem;
+    line-height: 1.5rem;
+}
+
+.success-msg em{
+    font-weight: 700;
+    font-style: normal;
+}
+
+.main-content.hidden, .desk-img.hidden{
+    display: none;
+}
+
+main.hidden-childs{
+    width: fit-content;
+}
+
+.success-msg.active{
+    display: block;
 }
 
 @media screen and (min-width:900px) {

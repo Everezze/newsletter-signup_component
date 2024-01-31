@@ -1,6 +1,12 @@
+const form = document.querySelector("form");
 const button = document.querySelector("button");
 const input = document.querySelector("input");
 const errorMessage = document.querySelector(".label-state b");
+const successMessage = document.querySelector(".success-msg");
+const successMessageButton = successMessage.querySelector("button");
+const mainContent = document.querySelector(".main-content");
+const deskImage = document.querySelector(".desk-img");
+const mainElement = document.querySelector("main");
 let validEmail = false;
 let submittedOnce = false;
 
@@ -28,10 +34,30 @@ input.addEventListener("input",function(){
 });
 
 button.addEventListener("click",function(event){
+    submittedOnce = true;
+    event.preventDefault();
     if(!validEmail){
         input.classList.add("active");
         errorMessage.classList.add("active");
-        event.preventDefault();
     }
-    submittedOnce = true;
+    else{
+        deskImage.classList.add("hidden");
+        mainContent.classList.add("hidden");
+        mainElement.classList.add("hidden-childs");
+        successMessage.querySelector("em").textContent = input.value
+        successMessage.classList.add("active");
+    }
+});
+
+successMessageButton.addEventListener("click", function(){
+    form.reset();
+    deskImage.classList.remove("hidden");
+    mainContent.classList.remove("hidden");
+    mainElement.classList.remove("hidden-childs");
+    successMessage.classList.remove("active");
+    submittedOnce = false;
+});
+
+window.addEventListener("load",function(){
+    form.reset();
 });
